@@ -1,4 +1,4 @@
-import ical from "ical-generator";
+import ical, { ICalEventRepeatingFreq, ICalEventTransparency } from "ical-generator";
 import type { BirthdayRecord } from "../types";
 
 export type IcsOptions = {
@@ -42,8 +42,8 @@ export function generateIcs(records: BirthdayRecord[], options: IcsOptions): str
       description: record.birthYear
         ? `Birthday reminder${options.includeBirthYear ? ` · Born ${record.birthYear}` : ""}`
         : "Birthday reminder",
-      repeating: { freq: "YEARLY" },
-      transparency: "TRANSPARENT",
+      repeating: { freq: ICalEventRepeatingFreq.YEARLY },
+      transparency: ICalEventTransparency.TRANSPARENT,
     });
   }
 
