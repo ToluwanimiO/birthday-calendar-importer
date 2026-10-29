@@ -256,23 +256,19 @@ export default function App() {
 
   return (
     <main className="app-shell">
-      <header className="topbar">
+      {/* <header className="topbar">
         <a className="brand" href="/" aria-label="Birthday Calendar Importer home">
           <span className="brand-icon">✳</span>
           <span>birthday<span className="brand-light">book</span></span>
         </a>
         <span className="privacy-label"><span className="privacy-dot" /> Files stay on your device</span>
-      </header>
+      </header> */}
 
       <section className="hero">
-        <div className="eyebrow"><span className="eyebrow-line" /> LESS ADMIN, MORE REMEMBERING</div>
-        <h1>Every birthday.<br /><em>One calendar.</em></h1>
-        <p className="hero-copy">Turn your Excel birthday list into a calendar you can import in minutes. No more adding people one by one.</p>
-        <div className="hero-chips">
-          <span><span className="chip-check">✓</span> Bulk import</span>
-          <span><span className="chip-check">✓</span> Yearly reminders</span>
-          <span><span className="chip-check">✓</span> No account needed</span>
-        </div>
+        <h1>Birthday Calendar Importer</h1>
+        <p className="hero-copy">
+          Turn a spreadsheet of birthdays into a calendar file you can import.
+        </p>
       </section>
 
       {(error || notice) && (
@@ -480,11 +476,11 @@ export default function App() {
           </>
         )}
       </section>
-
+{/* 
       <footer>
         <span>birthday<span className="brand-light">book</span></span>
         <span>Made to make remembering easier.</span>
-      </footer>
+      </footer> */}
     </main>
   );
 }
